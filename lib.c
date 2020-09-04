@@ -1,5 +1,7 @@
 #include "lib.h"
 
+#define GENMAX 3
+
 void viewlist(node *head)
 {
     if (head == NULL)
@@ -23,7 +25,7 @@ node *createLISTseq(node *head, int pos)
         {
             head = malloc(sizeof(node));
             tail = head;
-            head->value = rand() % 3;
+            head->value = rand() % GENMAX;
             head->nextNode = NULL;
         }
         else
@@ -31,7 +33,7 @@ node *createLISTseq(node *head, int pos)
             node *temp = malloc(sizeof(node));
             tail->nextNode = temp;
             tail = temp;
-            temp->value = rand() % 3;
+            temp->value = rand() % GENMAX;
             temp->nextNode = NULL;
         }
         pos = pos-1;
@@ -48,14 +50,14 @@ node *createLISTrec(node *head, int pos)
     if (head == NULL)
     {
         head = malloc(sizeof(node));
-        head->value = rand() % 21;
+        head->value = rand() % GENMAX;
         head->nextNode = createLISTrec(head->nextNode,pos-1);
         return head;
     }
     else
     {
         node *temp = malloc(sizeof(node));
-        temp->value = rand() % 21;
+        temp->value = rand() % GENMAX;
         temp->nextNode = createLISTrec(head->nextNode,pos-1);
         return temp;
     }

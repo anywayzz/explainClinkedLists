@@ -23,7 +23,7 @@ All functions are written in lib.c file. Below are explained.
 - *see*: 
     <br> prints only <code>node</code> type of nodes.
 
-Execution:
+Execution<br>
 ![viewlist](img/gif/viewlist.gif)
 
 ### viewlistC (nodeC *head)
@@ -35,5 +35,34 @@ Execution:
     <br> void
 - *see*: 
     <br> prints only <code>nodeC</code> type of nodes.
+Execution:<br>
+see viewlist.
 
 
+### createLISTseq (node *head, int pos)
+- *description*: 
+    <br>Sequentially create a list with random value between 0 and GENMAX.
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+    <br> <code>int pos</code>: number of nodes to generate.
+- *return*:
+    <br> <code>node *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+![createseq](img/gif/createlistseq.gif)
+
+### createLISTrec (node *head, int pos)
+- *description*: 
+    <br>Recursively create a list with random value between 0 and GENMAX.
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+    <br> <code>int pos</code>: number of nodes to generate.
+- *return*:
+    <br> <code>node *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+![createrec](img/gif/createlistrec.gif)
