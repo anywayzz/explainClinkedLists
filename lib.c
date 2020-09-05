@@ -284,4 +284,55 @@ nodeC *selectiveINSERT(nodeC *head,char c) //ad ogni punto va a capo.
     
 }
 
+nodeC *createStringList(nodeC* head,char string[])
+{
+    nodeC *tail=head;
+    for(int i=0; i<strlen(string);i++)
+    {
+        if(i==0)
+        {
+            head=malloc(sizeof(nodeC));
+            head->value = string[i];
+            head->nextNode = NULL;
+            tail = head;
+        }
+        else
+        {
+            nodeC *temp = malloc(sizeof(nodeC));
+            tail->nextNode = temp;
+            tail = temp;
+            temp->value = string[i];
+            temp->nextNode = NULL;
+        }
+    }
+    return head;
+}
+
+void logChar(nodeC *head,char *path)
+{
+    FILE *fp = fopen(path,"a+");
+    fputc(10,fp);
+    fputs("[LOG]: ",fp);
+    while(head!=NULL)
+    {
+        fputc(head->value,fp);
+        head = head->nextNode;
+    }
+    fclose(fp);
+}
+
+void logVal(node *head, char *path)
+{
+    FILE *fp = fopen(path,"a+");
+    while(head!=NULL)
+    {
+        char str[5]; //max 5 cifre
+        sprintf(str, "[%d] ",head->value);
+        fputs(str,fp);
+        head = head->nextNode;
+    }
+    fputs("NULL\n",fp);
+    fclose(fp);
+    return;
+}
 

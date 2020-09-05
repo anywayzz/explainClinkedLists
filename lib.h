@@ -41,4 +41,9 @@ nodeC *selectiveUPPER(nodeC *head, char c); //7a
 
 nodeC *selectiveINSERT(nodeC *head,char c); //7b
 
+nodeC *createStringList(nodeC* head,char string[]);
+
+void logChar(nodeC *head, char *path);
+
+void logVal(node *head, char *path);
 
