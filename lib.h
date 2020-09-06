@@ -47,3 +47,5 @@ void logChar(nodeC *head, char *path);
 
 void logVal(node *head, char *path);
 
+nodeC* squareWords(nodeC *head);
+

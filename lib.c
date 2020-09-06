@@ -336,3 +336,48 @@ void logVal(node *head, char *path)
     return;
 }
 
+nodeC *squareWords(nodeC *head)
+{
+    //TODO: efficiency
+    int cont=0;
+    nodeC *newHead=head,*temp=head;
+    while(temp!=NULL)
+    {
+        if(cont==0)
+        {
+            newHead=malloc(sizeof(nodeC));
+            newHead->nextNode = head;
+            newHead->value = '[';   
+        }
+        if(temp->value== ' ')
+        {
+            nodeC *square = malloc(sizeof(nodeC));
+            square->value= ' ';
+            temp->value= ']';
+            square->nextNode = temp->nextNode;
+            temp->nextNode = square->nextNode;
+        }
+        if(temp->value == ']')
+        {
+            nodeC *square = malloc(sizeof(nodeC));
+            square->value='[';
+            square->nextNode = temp->nextNode;
+            temp->nextNode=square;
+        }
+        if(temp->nextNode==NULL)
+        {
+            nodeC *square = malloc(sizeof(nodeC));
+            square->value=']';
+            square->nextNode = NULL;
+            temp->nextNode = square;
+            head = newHead;
+            return head;
+        }
+        cont++;
+        temp= temp->nextNode;
+    }
+    head = newHead;
+    return head;
+}
+
+

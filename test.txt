@@ -1,1 +1,3 @@
 Hi! I'm a linked list.I really love to be linked.
+[LOG]: Ciao stronzi !
+[LOG]: Ciao merde !

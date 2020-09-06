@@ -63,7 +63,7 @@ int main (int argc, char *argv[])
     l6 = createLISTrecFILE(l6,fp);
     viewlistC(l6);
 
-    
+    #endif
     //creo lista seq da USER
 
     puts("Inserisci una frase:\n");
@@ -71,7 +71,7 @@ int main (int argc, char *argv[])
     scanf("%[^\n]s",string);
     nodeC *l7=createStringList(l7, string);
     viewlistC(l7);
-    #endif
+    
 
     /*
     -------MANIPOLAZIONE------- 
@@ -111,9 +111,13 @@ int main (int argc, char *argv[])
 
     //aggiungo una frase ad un file da una lista precreata.
     logChar(l7,PATH);
-    #endif
     //loggo i nodi con valori interi in un file.
     logVal(l1,PATHVAL);
+    #endif
+
+    l7 = squareWords(l7);
+    viewlistC(l7);
+
 
     
 
