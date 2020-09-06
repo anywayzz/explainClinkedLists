@@ -11,11 +11,13 @@ At the moment the code is italian commented.
     1. [Iterative creation of a list](#Iterative-creation-of-a-list)
     2. [Recursive creation of a list](#Recursive-creation-of-a-list)
     3. [Iterative deleting node](#Iterative-deleting-node)
+    4. [Recursive insert node after](#Recursive-insert-node-after)
 3. [Functions](#Functions)
     1. [viewlist](#viewlist-node-head)
     2. [viewlistC](#viewlistc-nodec-head)
     3. [createListseq](#createlistseq-node-head-int-pos)
     4. [createListrec](#createlistrec-node-head-int-pos)
+    5. [removeVal](#removeval-node-head-int-val)
 ___
 ## Structs used
 
@@ -125,6 +127,31 @@ node *recursive(node *head, /*VARIABLE FOR ITERATION*/ )
 
 ```
 ---
+### Recursive insert node after
+
+```c
+   
+node *insertion(node *head)
+{
+    if(head==NULL)
+    {
+        return NULL;
+    }
+    else
+    {
+        if(/*INSERT CONDITION*/)
+        {
+            node *toINSERT = malloc(sizeof(node));
+            toINSERT->value= /*VALUE*/;
+            toINSERT->nextNode=head->nextNode;
+            head->nextNode=toINSERT;
+        }
+        return insertion(head->nextNode);
+    }
+}
+
+```
+---
 
 ## Functions
 ---
@@ -183,3 +210,71 @@ Execution:<br>
 
 Execution:<br>
 ![createrec](img/gif/createlistrec.gif)
+
+### createLISTseqUSER(node *head)
+- *description*: 
+    <br>Sequentially create a list using value inserted by user.
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+- *return*:
+    <br> <code>node *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See createLISTseq
+
+### createLISTrecUSER(node *head)
+- *description*: 
+    <br>Recursively create a list using value inserted by user.
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+- *return*:
+    <br> <code>node *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See createLISTrec
+
+### nodeC *createLISTseqFILE(nodeC *head,char path[])
+- *description*: 
+    <br>Sequentially create a list by characters in a file.
+- *param*:
+    <br> <code>nodeC *head</code>: pointer to the first node of the linked list.
+    <br> <code>char path[]</code>: pointer to the char array containing the path of the file.
+- *return*:
+    <br> <code>nodeC *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See createLISTseq
+
+### nodeC *createLISTrecFILE(nodeC *head,FILE *fp)
+- *description*: 
+    <br>Recursively create a list by characters in a file.
+- *param*:
+    <br> <code>nodeC *head</code>: pointer to the first node of the linked list.
+    <br> <code>FILE *fp</code>: pointer to the file stream.
+- *return*:
+    <br> <code>nodeC *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See createLISTrec
+
+### removeVAL (node *head,int val)
+- *description*: 
+    <br>Remove all nodes containing the value <code>val</code> from the linked list pointed by <code>head</code>
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+    <br> <code>int val</code>: value to delete.
+- *return*:
+    <br> <code>node *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+![removeval](img/gif/removeval.gif)
