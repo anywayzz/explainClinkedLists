@@ -23,7 +23,7 @@ ___
 
 <table>
 <tr>
-    <td>
+    <td style="width:70%">
         Two main node structure.<br><code>node</code> aims to contain integer values , <code>nodeC</code> char values. They're pretty similar:
         First field contains the (int/char) value, the second one a pointer to the next (same structure) node.
     </td>
@@ -167,6 +167,7 @@ All functions are written in lib.c file. Below are explained.
 - *see*: 
     <br> prints only <code>node</code> type of nodes.
 
+
 Execution<br>
 ![viewlist](img/gif/viewlist.gif)
 
@@ -237,7 +238,7 @@ See createLISTseq
 Execution:<br>
 See createLISTrec
 
-### nodeC *createLISTseqFILE(nodeC *head,char path[])
+### createLISTseqFILE(nodeC *head,char path[])
 - *description*: 
     <br>Sequentially create a list by characters in a file.
 - *param*:
@@ -251,7 +252,7 @@ See createLISTrec
 Execution:<br>
 See createLISTseq
 
-### nodeC *createLISTrecFILE(nodeC *head,FILE *fp)
+### createLISTrecFILE(nodeC *head,FILE *fp)
 - *description*: 
     <br>Recursively create a list by characters in a file.
 - *param*:
@@ -264,6 +265,20 @@ See createLISTseq
 
 Execution:<br>
 See createLISTrec
+
+### findVAL(node *head,int val)
+- *description*: 
+    <br>Recursively count number of nodes containing <code>val</code> in a given linked list.
+- *param*:
+    <br> <code>node *head</code>: pointer to the first node of the linked list.
+    <br> <code>int val</code>: value to find.
+- *return*:
+    <br> <code>int</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+![findval](img/gif/findval.gif)
 
 ### removeVAL (node *head,int val)
 - *description*: 
@@ -278,3 +293,32 @@ See createLISTrec
 
 Execution:<br>
 ![removeval](img/gif/removeval.gif)
+
+### findCHAR(nodeC *head, char c)
+- *description*: 
+    <br>Recursively count number of nodes containing <code>c</code> character in a given linked list.
+- *param*:
+    <br> <code>nodeC *head</code>: pointer to the first node of the linked list.
+    <br> <code>char c</code>: character to find
+- *return*:
+    <br> <code>int</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See findval
+
+### selectiveUPPER(nodeC *head, char c)
+- *description*: 
+    <br>Recursively transform all <code>c</code> characters into capital letters in a given linked list.
+- *param*:
+    <br> <code>nodeC *head</code>: pointer to the first node of the linked list.
+    <br> <code>char c</code>: character to up.
+- *return*:
+    <br> <code>nodeC *</code>
+- *see*: 
+    <br> -
+
+Execution:<br>
+See findval
+
