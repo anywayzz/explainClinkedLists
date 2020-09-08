@@ -167,6 +167,27 @@ All functions are written in lib.c file. Below are explained.
 - *see*: 
     <br> prints only <code>node</code> type of nodes.
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        The number of iterations is equal to the time complexity of the function, since this number is dependent by the maximum number of records invoked, those values are the same.
+        </td>
+    </tr>
+</table> 
+<br>
 
 Execution<br>
 ![viewlist](img/gif/viewlist.gif)
@@ -180,6 +201,29 @@ Execution<br>
     <br> void
 - *see*: 
     <br> prints only <code>nodeC</code> type of nodes.
+
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        The number of iterations is equal to the time complexity of the function, since this number is dependent by the maximum number of records invoked, those values are the same.
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 see viewlist.
 
@@ -195,6 +239,28 @@ see viewlist.
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( 1 )</b><br> 
+        The fuction is called once.
+        </td>
+        <td style="width:50%">
+        <b>O ( pos )</b><br>
+        pos + 1 is the maximum number of iterations (due to number of comparison in the while loop), with high values the +1 term will not affect the curve described by the function, so its negligible.
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 ![createseq](img/gif/createlistseq.gif)
 
@@ -209,6 +275,28 @@ Execution:<br>
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( pos )</b><br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+        <b>O ( pos )</b><br>
+        pos + 1 is the maximum number of comparison made, at least once when the function is called. At high values of pos, +1 will be negligible.
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 ![createrec](img/gif/createlistrec.gif)
 
@@ -222,6 +310,28 @@ Execution:<br>
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( 1 )</b><br> 
+        The fuction is called once.
+        </td>
+        <td style="width:50%">
+        <b>O ( mod(val) )</b><br>
+        where <code>mod()</code> is a function that returns the number of modification to the value in input. Actually it would be O(mod(val-1)), beacause the first assignment is indipendent by the while loop. 
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 See createLISTseq
 
@@ -234,6 +344,28 @@ See createLISTseq
     <br> <code>node *</code>
 - *see*: 
     <br> -
+
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( mod( val ) )</b><br> where <code>mod()</code> is a function that returns the number of modification to the value in input.
+        Activation records are invoked till <code>val</code> value is 0.
+        </td>
+        <td style="width:50%">
+        <b>O ( mod( val ) )</b><br> where <code>mod()</code> is a function that returns the number of modification to the value in input.
+        This number is dependent by the maximum number of records invoked which is dependent by user input.
+        </td>
+    </tr>
+</table> 
+<br>
 
 Execution:<br>
 See createLISTrec
@@ -249,6 +381,28 @@ See createLISTrec
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( 1 )</b><br> 
+        The fuction is called once.
+        </td>
+        <td style="width:50%">
+        <b>O ( charnumber(fp) )</b><br> 
+        where <code>charnumber()</code> is a function that returns the number of ASCII characters in the file pointer <code>fp</code>.
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 See createLISTseq
 
@@ -262,6 +416,28 @@ See createLISTseq
     <br> <code>nodeC *</code>
 - *see*: 
     <br> -
+
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( charnumber(fp) )</b><br> where <code>charnumber()</code> is a function that returns the number of ASCII characters in the file pointer <code>fp</code>.
+        Max activation record invoked are given by the final number of nodes in the linked list +1.
+        </td>
+        <td style="width:50%">
+        <b>O ( charnumber(fp) )</b><br> 
+        where <code>charnumber()</code> is a function that returns the number of ASCII characters in the file pointer <code>fp</code>.
+        </td>
+    </tr>
+</table> 
+<br>
 
 Execution:<br>
 See createLISTrec
@@ -277,6 +453,27 @@ See createLISTrec
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 ![findval](img/gif/findval.gif)
 
@@ -290,6 +487,27 @@ Execution:<br>
     <br> <code>node *</code>
 - *see*: 
     <br> -
+
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( 1 )</b><br> 
+        The fuction is called once.
+        </td>
+        <td style="width:50%">
+        <b>O ( len( list ))</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        </td>
+    </tr>
+</table> 
+<br>
 
 Execution:<br>
 ![removeval](img/gif/removeval.gif)
@@ -305,6 +523,27 @@ Execution:<br>
 - *see*: 
     <br> -
 
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        </td>
+    </tr>
+</table> 
+<br>
+
 Execution:<br>
 See findval
 
@@ -318,6 +557,27 @@ See findval
     <br> <code>nodeC *</code>
 - *see*: 
     <br> -
+
+<table>
+    <tr>
+        <td style="width:50%">
+            Space complexity
+        </td>
+        <td style="width:50%">
+            Time complexity
+        </td>
+    </tr>
+    <tr>
+        <td style="width:50%">
+        <b>O ( len( list ) )</b><br> where <code>len()</code> is a function returning the node number of the list and <code>list</code> is the object representing the linked list.<br>
+        Max activation record invoked are given by the number of nodes in the linked list.
+        </td>
+        <td style="width:50%">
+            [Time complexity]
+        </td>
+    </tr>
+</table> 
+<br>
 
 Execution:<br>
 See findval
