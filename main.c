@@ -9,23 +9,32 @@
 #define MAXLEN 255
 
 int main (int argc, char *argv[])
-{
-
-    puts("Start\n");
+{   
     srand((unsigned)time(NULL));
     char path[] = PATH; //definizione path
+    node *lists[5]; //max 5 list
+    int cont=0; //counter of list created
+    int choice=0;
+    do{
+        lists[cont] = create_menu();
+        cont ++;
+        logo();puts("Do you want to create another list? (1=y,0=n)");
+        printf("\n> ");scanf("%d",&choice);
+    }while(choice !=1 || cont <= 4);
+
 
     /*
     -------CREAZIONE------- 
     */
     
+    #if SKIP
     //creo lista seq
 
     node *l1=NULL;
     l1= createLISTseq(l1,10);
     puts("\nLista seq :\n");
     viewlist(l1);
-    #if SKIP
+    
 
 
     //creo lista rec
@@ -63,7 +72,7 @@ int main (int argc, char *argv[])
     l6 = createLISTrecFILE(l6,fp);
     viewlistC(l6);
 
-    #endif
+    
     //creo lista seq da USER
 
     puts("Inserisci una frase:\n");
@@ -117,7 +126,7 @@ int main (int argc, char *argv[])
 
     l7 = squareWords(l7);
     viewlistC(l7);
-
+    #endif
 
     
 

@@ -15,6 +15,10 @@ typedef struct nodeC
     struct nodeC* nextNode;
 }nodeC;
 
+void logo();
+
+node* create_menu();
+
 void viewlist(node *head); //2
 
 node *createLISTseq(node* head,int pos); //3

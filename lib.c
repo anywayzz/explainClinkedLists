@@ -1,6 +1,163 @@
 #include "lib.h"
 
 #define GENMAX 3
+#define VAL 2
+#define CHAR 'a'
+#define PATH "test.txt" //for char log uses
+#define PATHVAL "val.txt" //for int log uses
+#define MAXLEN 255
+
+void logo()
+{
+    system("@cls||clear");
+    puts("╦  ┬┌┐┌┬┌─┌─┐┌┬┐  ┬  ┬┌─┐┌┬┐┌─┐  ┌─┐┬  ┌─┐┬ ┬┬─┐┌─┐┌─┐┌┬┐\r");
+    puts("║  ││││├┴┐├┤  ││  │  │└─┐ │ └─┐  ├─┘│  ├─┤└┬┘├┬┘│ ││ ││││\r");
+    puts("╩═╝┴┘└┘┴ ┴└─┘─┴┘  ┴─┘┴└─┘ ┴ └─┘  ┴  ┴─┘┴ ┴ ┴ ┴└─└─┘└─┘┴ ┴\r");
+    puts("---------------------------------------------------------");
+    puts("More at: https://github.com/anywayzz/explainClinkedLists\n");
+    printf("current VAL: %d\n",VAL);
+    printf("current CHAR: %c\n",CHAR);
+    printf("current PATH: %s\n",PATH);
+    printf("current PATHVAL: %s\n",PATHVAL);
+    puts("---------------------------------------------------------\n");
+    return;
+}
+
+node* create_menu()
+{
+    int choice=0;
+    node *currentlist=NULL;
+    int i=0;
+
+    logo();
+    puts("1. Create a new list.");
+    puts("2. Exit.");
+    printf("\n> ");scanf("%d",&choice);
+    if(choice==1)
+    {
+        logo();
+        puts("1. Linked list of values\n");
+        puts("2. Linked list of characters\n");
+        printf("\n> ");scanf("%d",&choice);
+        if(choice==1)
+        {
+            logo();
+            puts("1. Random values\n");
+            puts("2. Keyboard input\n");
+            printf("\n> ");scanf("%d",&choice);
+            if(choice==1)
+            {
+                logo();
+                puts("1. Sequential creation\n");
+                puts("2. Recursive creation\n");
+                printf("\n> ");scanf("%d",&choice);
+                if(choice==1)
+                {
+                    int nodes=0;
+                    logo();
+                    puts("How many nodes?\t");
+                    do
+                    {
+                        printf("\n> ");scanf("%d",&nodes);
+                    } while (nodes<=0);
+                    //create list seq
+                }
+                if(choice==2)
+                {
+                    logo();
+                    //create list rec;
+                }
+                else
+                {
+                    return create_menu();
+                }
+                
+            }
+            if(choice==2)
+            {
+                logo();
+                puts("1. Sequential creation\n");
+                puts("2. Recursive creation\n");
+                printf("\n> ");scanf("%d",&choice);
+                if(choice==1)
+                {
+                    logo();
+                    //create list seq user
+                }
+                if(choice==2)
+                {
+                    logo();
+                    //create list rec user;
+                }
+                else
+                {
+                    return create_menu();
+                }
+                
+            }
+            else
+            {
+                return create_menu();
+            }
+            
+        }
+        if(choice==2)
+        {
+            logo();
+            puts("1. Linked list from file\n");
+            puts("2. Linked list by keyboard\n");
+            printf("\n> ");scanf("%d",&choice);
+            if(choice==1)
+            {
+                logo();
+                puts("1. Sequential creation\n");
+                puts("2. Recursive creation\n");
+                printf("\n> ");scanf("%d",&choice);
+                if(choice==1)
+                {
+                    //create list seq file
+                }
+                if(choice ==2)
+                {
+                    //create list rec file
+                }
+                else
+                {
+                    return create_menu();
+                }
+            }
+            if(choice ==2)
+            {
+                #if skip
+                    puts("Inserisci una frase:\n");
+                    char string[MAXLEN];
+                    scanf("%[^\n]s",string);
+                    nodeC *l7=createStringList(l7, string);
+                    viewlistC(l7);
+                #endif
+            }
+            else
+            {
+                return create_menu();
+            }
+            
+        }
+        else
+        {
+            return create_menu();
+        }
+    }
+    else if(choice==2)
+    {
+        return currentlist;
+    }
+    else
+    {
+        puts("Wrong input.\n");
+        return create_menu();
+    }
+    return currentlist;
+}
 
 void viewlist(node *head)
 {
